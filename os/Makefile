@@ -15,7 +15,7 @@ clean:
 	cargo clean
 
 run: kernel
-	timeout --foreground 300s /opt/qemu-7.0.0/build/qemu-system-riscv64 \
+	timeout --foreground 300s qemu-system-riscv64 \
 		-machine virt \
 		-nographic \
 		-bios $(BOOTLOADER) \
